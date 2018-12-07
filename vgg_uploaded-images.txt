@@ -1,0 +1,88 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+bucket
+dog
+dog
+skunk
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                  Bucket_01.jpg  label:                     bucket
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                   skunk_01.jpg  label:                      skunk
+
+     MATCH:
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                  skunk_01.jpg: 
+Real:                      skunk   Classifier:     skunk, polecat, wood pussy
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                       malinois
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+***********Dog names************ {}
+Opening file here**************************
+
+     MATCH:
+
+                 Bucket_01.jpg: 
+Real:                     bucket   Classifier:                   bucket, pail  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                  skunk_01.jpg: 
+Real:                      skunk   Classifier:     skunk, polecat, wood pussy  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                       malinois  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 150.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+--- Results Summary for CNN Model Architecture VGG ---
+
+N Images            :  4
+N Dog Images        :  2
+N Not-Dog Images    :  2 
+
+pct_match           : 75.00
+pct_correct_dogs    : 100.00
+pct_correct_breed   : 150.00
+pct_correct_notdogs : 100.00
+
+
+Incorrect dogs
+There are no (zilch, zero, nada) Pet Label and Classification Label that were misclassified
+
+
+
+Incorrect breed
+:                        dog   Classifier:                       malinois
+
+** Total Elapsed Runtime: 0:0:5
