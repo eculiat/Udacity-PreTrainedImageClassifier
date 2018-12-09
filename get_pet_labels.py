@@ -96,18 +96,22 @@ def get_pet_labels(image_dir):
     def make_pet_labels(list):   
         # loop through each item or filename in the list of filenames
         for item in list:
-            lcase_item = item.lower()                # lower case
-            lcase_item_list = lcase_item.split("_")  # split "_"
-            temp_item = ""
-            # since the filename was split from "_" go through the list
-            for sub_item in lcase_item_list:
-                # disregard sub_item with "." ie 03750.jpg
-                if sub_item.find(".") == -1:
-                    temp_item += " " + sub_item
-            temp_item = temp_item.strip()
-            print(temp_item)
-            pet_labels.append(temp_item)
-            #print(temp_item)
+            if item[0] != "." :
+                print("true file<<<<<<<<<<<<<<<")
+                lcase_item = item.lower()                # lower case
+                lcase_item_list = lcase_item.split("_")  # split "_"
+                temp_item = ""
+                # since the filename was split from "_" go through the list
+                for sub_item in lcase_item_list:
+                    # disregard sub_item with "." ie 03750.jpg
+                    if sub_item.find(".") == -1:
+                        temp_item += " " + sub_item
+                temp_item = temp_item.strip()
+                print(temp_item)
+                pet_labels.append(temp_item)
+                #print(temp_item)
+            else:
+                print("file begins with . <<<<<<<<<<<<")
        
         return pet_labels
                     
